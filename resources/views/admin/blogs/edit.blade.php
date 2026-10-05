@@ -146,9 +146,7 @@
                     <div class="mb-3">
                         <label for="content" class="form-label d-flex align-items-center justify-content-between" style="font-weight:700;font-size:13px;color:#334155;">
                             <span>Blog Full Content <span class="text-danger">*</span></span>
-                            <span class="badge" style="background:#e0f2fe;color:#0284c7;font-weight:600;font-size:11px;">
-                                <i class="bi bi-magic me-1"></i> Jodit Rich Text Editor
-                            </span>
+                           
                         </label>
                         <textarea name="content"
                                   id="content"
