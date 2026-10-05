@@ -50,7 +50,7 @@
     <div class="table-card">
         <div class="table-card-header d-flex flex-wrap align-items-center justify-content-between gap-3">
             <div>
-                <h6 class="mb-1" style="font-weight:700;color:#1a1f36;">📰 Articles & Stories</h6>
+                <h6 class="mb-1" style="font-weight:700;color:#1a1f36;">Articles & Stories</h6>
                 <span style="font-size:12px;color:#8b92a9;">Showing {{ $blogs->firstItem() ?? 0 }} - {{ $blogs->lastItem() ?? 0 }} of {{ $blogs->total() }} blogs</span>
             </div>
             <div class="d-flex align-items-center gap-2">
@@ -142,7 +142,7 @@
                             <td style="padding:14px 18px;">
                                 @if($blog->category)
                                     <span class="badge" style="background:#fff7ed;color:#f97316;font-size:12px;font-weight:700;padding:6px 12px;border-radius:20px;border:1px solid #fed7aa;">
-                                        🏷️ {{ $blog->category->name }}
+                                        {{ $blog->category->name }}
                                     </span>
                                 @else
                                     <span class="badge bg-light text-muted" style="font-size:11px;border-radius:20px;">Uncategorized</span>

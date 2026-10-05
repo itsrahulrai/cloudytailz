@@ -60,7 +60,7 @@
     <div class="table-card">
         <div class="table-card-header d-flex flex-wrap align-items-center justify-content-between gap-3">
             <div>
-                <h6 class="mb-1" style="font-weight:700;color:#1a1f36;">📂 Category List</h6>
+                <h6 class="mb-1" style="font-weight:700;color:#1a1f36;">Category List</h6>
                 <span style="font-size:12px;color:#8b92a9;">Showing {{ $categories->firstItem() ?? 0 }} - {{ $categories->lastItem() ?? 0 }} of {{ $categories->total() }} entries</span>
             </div>
             <div class="d-flex align-items-center gap-2">
@@ -122,9 +122,6 @@
                             <td style="color:#8b92a9;font-size:12px;padding:14px 18px;">{{ $category->id }}</td>
                             <td style="padding:14px 18px;">
                                 <div class="d-flex align-items-center gap-2">
-                                    <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:#fff7ed;color:#f97316;font-size:14px;">
-                                        🐾
-                                    </span>
                                     <div>
                                         <div style="font-weight:700;color:#1e293b;font-size:14px;">{{ $category->name }}</div>
                                     </div>
@@ -179,7 +176,7 @@
                     @empty
                         <tr>
                             <td colspan="7" class="text-center py-5" style="color:#8b92a9;">
-                                <div class="mb-2" style="font-size:32px;">🏷️</div>
+                                <div class="mb-2" style="font-size:32px;"></div>
                                 <div style="font-weight:700;color:#1e293b;">No categories found</div>
                                 <p class="mb-3" style="font-size:13px;color:#8b92a9;">Get started by adding your first blog category.</p>
                                 <a href="{{ route('admin.categories.create') }}" class="btn btn-sm"
