@@ -1,0 +1,35 @@
+<IfModule mod_rewrite.c>
+Options -Indexes -MultiViews
+
+RewriteEngine On
+
+# Protect hidden files including .env
+RewriteRule (^|/)\.(?!well-known/) - [F,L]
+
+# Block sensitive files
+RewriteRule ^(vendor|storage|bootstrap/cache)/ - [F,L]
+
+<FilesMatch "^(\.env|composer\.(json|lock)|artisan|phpunit\.xml)$">
+Require all denied
+</FilesMatch>
+
+# Handle Authorization
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
+
+# Laravel Front Controller
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+
+</IfModule>
+
+<IfModule mod_headers.c>
+Header always set X-Frame-Options SAMEORIGIN
+Header always set X-Content-Type-Options nosniff
+</IfModule>
