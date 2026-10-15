@@ -70,7 +70,7 @@
                     <div class="card shadow-lg">
                         <div class="card-body">
 
-                            <h4 class="text-center login-title">Admin Login</h4>
+                                 <h4 class="text-center login-title">Admin Login</h4>
 
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf

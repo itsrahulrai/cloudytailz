@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\ContactInquiryController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\BlogController as AdminBlogController;
 use App\Http\Controllers\Frontend\BlogController as FrontendBlogController;
+use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
+use App\Http\Controllers\Frontend\ServiceController as FrontendServiceController;
 
 
 Route::post('/submit/pet-visit', [FormController::class, 'submitPetVisit'])->name('submit.petvisit');
@@ -67,6 +69,8 @@ Route::get('gallery', function(){
 Route::get('blogs', [FrontendBlogController::class, 'index'])->name('blog');
 Route::get('blogs/{slug}', [FrontendBlogController::class, 'show'])->name('blog.detail');
 
+Route::get('service/{slug}', [FrontendServiceController::class, 'show'])->name('service.detail');
+
 Route::get('contact-us', function(){
     return view('frontend.contact-us');
 })->name('contact');
@@ -114,4 +118,8 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     // Blogs
     Route::resource('blogs', AdminBlogController::class);
     Route::patch('/blogs/{blog}/toggle-status', [AdminBlogController::class, 'toggleStatus'])->name('blogs.toggle-status');
+
+    // Custom Services
+    Route::resource('services', AdminServiceController::class);
+    Route::patch('/services/{service}/toggle-status', [AdminServiceController::class, 'toggleStatus'])->name('services.toggle-status');
 });

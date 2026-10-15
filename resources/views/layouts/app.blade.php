@@ -578,7 +578,12 @@
             <span class="sidebar-badge">{{ \App\Models\Blog::where('status', true)->count() }}</span>
         </a>
 
-
+        <div class="sidebar-section-label">Service Management</div>
+        <a href="{{ route('admin.services.index') }}"
+            class="nav-link {{ request()->routeIs('admin.services*') ? 'active' : '' }}">
+            <i class="bi bi-briefcase-fill"></i> Custom Services
+            <span class="sidebar-badge">{{ \App\Models\Service::where('status', true)->count() }}</span>
+        </a>
 
         <div class="sidebar-section-label">Settings</div>
         <a href="{{ route('profile.edit') }}" class="nav-link">
