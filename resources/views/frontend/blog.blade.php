@@ -1,9 +1,16 @@
 @extends('frontend.layout.app')
-@section('title', ($activeCategory ? $activeCategory->name . ' - ' : '') . 'Blog | Cloudytailz – Complete Dog & Cat Pet Care Services')
-@section('meta_description', $activeCategory ? ($activeCategory->description ?: 'Explore expert articles on ' . $activeCategory->name . ' for your dogs and cats from Cloudytailz.') : 'Stay updated with expert-backed insights on dog and cat care, including health management, diet planning, grooming, and preventive care.')
+@section('title', $activeCategory ? ($activeCategory->name . ' - Expert Dog & Cat Care Tips and Guides | Cloudytailz') : 'Expert Dog & Cat Care Tips and Guides | Cloudytailz')
+@section('meta_description', $activeCategory ? ($activeCategory->description ?: 'Explore expert articles on ' . $activeCategory->name . ' for your dogs and cats from Cloudytailz.') : "Learn how to keep your pets healthy with practical dog and cat care tips, grooming guidance, vaccination advice, and wellness articles. Explore now!")
 @section('meta_keywords', 'Cloudytailz, pet care blog, dog care tips, cat care, pet grooming, pet nutrition, vet advice India')
 @section('meta_robots', 'index, follow')
-@section('canonical', url()->current())
+@section('canonical', $activeCategory ? ('https://cloudytailz.com/blogs?category=' . $activeCategory->slug) : 'https://cloudytailz.com/blogs')
+@section('seo_tags')
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CloudyTailz">
+    <meta property="og:title" content="{{ $activeCategory ? ($activeCategory->name . ' - Expert Dog & Cat Care Tips and Guides | Cloudytailz') : 'Expert Dog & Cat Care Tips and Guides | Cloudytailz' }}">
+    <meta property="og:description" content="{{ $activeCategory ? ($activeCategory->description ?: 'Explore expert articles on ' . $activeCategory->name . ' for your dogs and cats from Cloudytailz.') : 'Learn how to keep your pets healthy with practical dog and cat care tips, grooming guidance, vaccination advice, and wellness articles. Explore now!' }}">
+    <meta property="og:url" content="{{ $activeCategory ? ('https://cloudytailz.com/blogs?category=' . $activeCategory->slug) : 'https://cloudytailz.com/blogs' }}">
+@endsection
 
 @push('styles')
 <style>

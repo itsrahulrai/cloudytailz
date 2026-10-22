@@ -1,19 +1,23 @@
 @extends('frontend.layout.app')
 
-@section('title', 'Refund Policy - Cloudytailz – Complete Dog & Cat Pet Care Services')
-@section('meta_description',
-    'Cloudytailz offers premium pet care services for dogs and cats including grooming, healthy
-    food, vet support, and personalized care to keep your furry friends happy and healthy.')
-@section('meta_keywords',
-    'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services
-    India, dog grooming, cat grooming, pet clinic, pet health care')
+@section('title', 'Refund Policy & Cancellation Terms | Cloudytailz')
+@section('meta_description', 'Read the Cloudytailz Refund Policy for pet grooming and care services. Learn about cancellations, refund eligibility, processing times, and service terms.')
+@section('meta_keywords', 'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services India, dog grooming, cat grooming, pet clinic, pet health care')
 @section('meta_robots', 'index, follow')
-@section('canonical', url()->current())
+@section('canonical', 'https://cloudytailz.com/refund-policy')
+@section('seo_tags')
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CloudyTailz">
+    <meta property="og:title" content="Refund Policy & Cancellation Terms | Cloudytailz">
+    <meta property="og:description" content="Read the Cloudytailz Refund Policy for pet grooming and care services. Learn about cancellations, refund eligibility, processing times, and service terms.">
+    <meta property="og:url" content="https://cloudytailz.com/refund-policy">
+@endsection
 @section('content')
 
 
     <style>
-        .service-entry h1 {
+        .service-entry h1,
+        .service-entry h2 {
             margin-bottom: 15px;
         }
 
@@ -46,7 +50,7 @@
                         <h1 class="text-anime-style-3">Refund Policy</h1>
                         <nav>
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./">home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                 <li class="breadcrumb-item active">Refund Policy</li>
                             </ol>
                         </nav>
@@ -65,7 +69,7 @@
                     <div class="service-single-content">
                         <div class="service-entry">
 
-                            <h1>Refund Policy</h1>
+                            <h2>Refund Policy</h2>
                             <p><strong>Last Updated:</strong> 21-02-2026</p>
 
                             <p>

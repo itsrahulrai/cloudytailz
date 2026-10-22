@@ -7,7 +7,7 @@
                     <div class="about-footer-prime">
                         <!-- Footer Logo Start -->
                         <div class="footer-logo-prime">
-                            <a href="./">
+                            <a href="{{ route('home') }}">
                             <img style="border-radius: 80px;" src="{{ asset_url('assets/images/logo-cloudy.jpeg')}}" width="100px" alt="logo">
                             </a>
                         </div>
@@ -73,8 +73,9 @@
 
                         <!-- Footer Links Start -->
                         <div class="footer-links-prime">
-                            <h3>Usedful link</h3>
+                            <h3>Useful Links</h3>
                             <ul>
+                                <li><a href="{{route('home')}}">Home</a></li>
                                 <li><a href="{{route('terms-and-conditions')}}">Terms and conditions</a></li>
                                 <li><a href="{{route('refund-policy')}}">Refund Policy</a></li>
                                 <li><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
@@ -108,7 +109,7 @@
                                         <img src="{{ asset_url('assets/images/icon/icon-location-white.svg')}}" alt="">
                                     </div>
                                     <div class="footer-link-content-prime">
-                                        <p>55, Street No. 1, Rajiv Gandhi Nagar, New Mustafabad, Gokalpuri, NCT of Delhi, 110094</p>
+                                        <p>55, Gali No. 3, Block G, Rajiv Gandhi Nagar, New Mustafabad, Gokulpuri, Delhi, 110094</p>
                                     </div>
                                 </div>
                                 <!-- Footer Link Item End -->
@@ -119,7 +120,7 @@
                                         <img src="{{ asset_url('assets/images/icon/icon-clock-white.svg')}}" alt="">
                                     </div>
                                     <div class="footer-link-content-prime">
-                                        <p>Mon-Sat: 9:00 AM - 8:00 PM</p>
+                                        <p>Mon-Sat: 8:00 AM - 8:00 PM</p>
                                         <p>Sunday: Closed</p>
                                     </div>
                                 </div>

@@ -1,12 +1,17 @@
 @extends('frontend.layout.app')
 
-@section('title', 'Cloudytailz – Complete Dog & Cat Pet Care Services')
-@section('meta_description', 'Cloudytailz offers premium pet care services for dogs and cats including grooming, healthy
-    food, vet support, and personalized care to keep your furry friends happy and healthy.')
-@section('meta_keywords', 'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services
-    India, dog grooming, cat grooming, pet clinic, pet health care')
+@section('title', 'Pet Grooming & Care Services at Home | CloudyTailz')
+@section('meta_description', "Skip salon visits! Cloudytailz brings dog and cat grooming to your home with bathing, haircuts, and hygiene care. Book your pet's session today!")
+@section('meta_keywords', 'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services India, dog grooming, cat grooming, pet clinic, pet health care')
 @section('meta_robots', 'index, follow')
-@section('canonical', url()->current())
+@section('canonical', 'https://cloudytailz.com/')
+@section('seo_tags')
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CloudyTailz">
+    <meta property="og:title" content="Pet Grooming & Care Services at Home | CloudyTailz">
+    <meta property="og:description" content="Skip salon visits! Cloudytailz brings dog and cat grooming to your home with bathing, haircuts, and hygiene care. Book your pet's session today!">
+    <meta property="og:url" content="https://cloudytailz.com/">
+@endsection
 @section('content')
 
 
@@ -22,7 +27,7 @@
                     <div class="section-title">
                         <h3 class="wow fadeInUp">Cloudytailz Pet Care</h3>
                         <h1 class="text-anime-style-3" data-cursor="-opaque">
-                            Care your pets deserve
+                            Pet Grooming & Care Services
                         </h1>
                         <p class="wow fadeInUp" data-wow-delay="0.2s">
                             Cloudytailz provides trusted care, expert guidance, and quality essentials to keep your dogs

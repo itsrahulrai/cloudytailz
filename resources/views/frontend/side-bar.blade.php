@@ -5,7 +5,7 @@
         <ul>
             <li><a href="{{route('dog-grooming')}}">Dog Grooming</a></li>
             <li><a href="{{route('cat-grooming')}}">Cat Grooming</a></li>
-            <li><a href="{{route('vet-home-visit')}}">Vet Video Call</a></li>
+            <li><a href="{{route('vet-video-call')}}">Vet Video Call</a></li>
             <li><a href="{{route('vet-home-visit')}}">Vet Home Visit</a></li>
             <li><a href="{{route('pet-nutritionist')}}">Pet Nutritionist</a></li>
         </ul>
@@ -25,7 +25,7 @@
         <!-- Sidebar CTA Body Start -->
         <div class="sidebar-cta-body">
             <div class="icon-box">
-                <img src="images/logo-png.png" alt="">
+                <img src="{{ asset_url('assets/images/logo-png.png') }}" alt="Cloudytailz">
             </div>
 
             <!-- Sidebar CTA Content Start -->

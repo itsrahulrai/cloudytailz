@@ -1,0 +1,18 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Scissors & Comb for Hair Styling Package -->
+  <!-- Comb -->
+  <path d="M7 10C7 8.89543 7.89543 8 9 8H41C42.1046 8 43 8.89543 43 10V14C43 15.1046 42.1046 16 41 16H9C7.89543 16 7 15.1046 7 14V10Z" fill="#3A1916"/>
+  <rect x="11" y="16" width="2" height="7" rx="1" fill="#3A1916"/>
+  <rect x="16" y="16" width="2" height="7" rx="1" fill="#3A1916"/>
+  <rect x="21" y="16" width="2" height="7" rx="1" fill="#3A1916"/>
+  <rect x="26" y="16" width="2" height="7" rx="1" fill="#3A1916"/>
+  <rect x="31" y="16" width="2" height="7" rx="1" fill="#3A1916"/>
+  <rect x="36" y="16" width="2" height="7" rx="1" fill="#3A1916"/>
+  <!-- Scissors -->
+  <circle cx="16" cy="40" r="5" stroke="#E25E52" stroke-width="2.5" fill="none"/>
+  <circle cx="34" cy="40" r="5" stroke="#E25E52" stroke-width="2.5" fill="none"/>
+  <path d="M19.5 36.5L34 20" stroke="#E25E52" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M30.5 36.5L16 20" stroke="#E25E52" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="25" cy="27.5" r="1.5" fill="#3A1916"/>
+</svg>
+

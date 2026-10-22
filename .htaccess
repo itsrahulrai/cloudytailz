@@ -3,6 +3,15 @@ Options -Indexes -MultiViews
 
 RewriteEngine On
 
+# Redirect WWW to Non-WWW (Permanent 301)
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# Redirect HTTP to HTTPS for cloudytailz.com
+RewriteCond %{HTTP_HOST} ^cloudytailz\.com$ [NC]
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
 # Protect hidden files including .env
 RewriteRule (^|/)\.(?!well-known/) - [F,L]
 

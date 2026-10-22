@@ -1,13 +1,16 @@
 @extends('frontend.layout.app')
-@section('title', 'Cat Grooming | Cloudytailz – Complete Dog & Cat Pet Care Services')
-@section('meta_description',
-    'Cloudytailz offers premium pet care services for dogs and cats including grooming, healthy
-    food, vet support, and personalized care to keep your furry friends happy and healthy.')
-@section('meta_keywords',
-    'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services
-    India, dog grooming, cat grooming, pet clinic, pet health care')
+@section('title', 'Gentle Cat Grooming Services at Home | Cloudytailz')
+@section('meta_description', 'Keep your cat clean, healthy, and tangle-free with Cloudytailz cat grooming services. Enjoy gentle brushing, bathing, and nail trimming. Book today!')
+@section('meta_keywords', 'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services India, dog grooming, cat grooming, pet clinic, pet health care')
 @section('meta_robots', 'index, follow')
-@section('canonical', url()->current())
+@section('canonical', 'https://cloudytailz.com/cat-grooming')
+@section('seo_tags')
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CloudyTailz">
+    <meta property="og:title" content="Gentle Cat Grooming Services at Home | Cloudytailz">
+    <meta property="og:description" content="Keep your cat clean, healthy, and tangle-free with Cloudytailz cat grooming services. Enjoy gentle brushing, bathing, and nail trimming. Book today!">
+    <meta property="og:url" content="https://cloudytailz.com/cat-grooming">
+@endsection
 @section('content')
 
 
@@ -21,7 +24,7 @@
                         <h1 class="text-anime-style-3" data-cursor="-opaque">Cat Grooming</h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./">home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Cat Grooming</li>
                             </ol>
                         </nav>

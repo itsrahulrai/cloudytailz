@@ -5,7 +5,7 @@
 @section('meta_description', $blog->meta_description ?: ($blog->short_description ?: \Illuminate\Support\Str::limit(strip_tags($blog->content), 155)))
 @section('meta_keywords', $blog->meta_keywords ?: 'pet care, dog grooming, cat health, dog diet, vet services, Cloudytailz')
 @section('meta_robots', 'index, follow')
-@section('canonical', $blog->canonical_url ?: url()->current())
+@section('canonical', $blog->canonical_url ? str_replace('://www.', '://', $blog->canonical_url) : 'https://cloudytailz.com/blogs/' . $blog->slug)
 
 {{-- ── 2. OPEN GRAPH, TWITTER & SCHEMA.ORG JSON-LD ── --}}
 @section('seo_tags')
@@ -14,7 +14,7 @@
     <meta property="og:site_name" content="Cloudytailz">
     <meta property="og:title" content="{{ $blog->meta_title ?: $blog->title }}">
     <meta property="og:description" content="{{ $blog->meta_description ?: ($blog->short_description ?: \Illuminate\Support\Str::limit(strip_tags($blog->content), 155)) }}">
-    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:url" content="{{ 'https://cloudytailz.com/blogs/' . $blog->slug }}">
     <meta property="og:image" content="{{ $blog->image_url }}">
     <meta property="og:image:alt" content="{{ $blog->title }}">
     <meta property="article:published_time" content="{{ $blog->created_at ? $blog->created_at->toIso8601String() : '' }}">
@@ -37,7 +37,7 @@
         "@@type": "BlogPosting",
         "mainEntityOfPage": {
             "@@type": "WebPage",
-            "@@id": "{{ url()->current() }}"
+            "@@id": "{{ 'https://cloudytailz.com/blogs/' . $blog->slug }}"
         },
         "headline": "{{ addslashes($blog->title) }}",
         "description": "{{ addslashes($blog->meta_description ?: ($blog->short_description ?: \Illuminate\Support\Str::limit(strip_tags($blog->content), 160))) }}",

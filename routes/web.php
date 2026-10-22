@@ -24,7 +24,7 @@ Route::get('/thank-you', fn() => view('frontend.thank-you'))->name('thank.you');
 Route::get('/', function () {
     $latestBlogs = \App\Models\Blog::with('category')->published()->latest()->take(3)->get();
     return view('frontend.index', compact('latestBlogs'));
-});
+})->name('home');
 
 Route::get('about-us', function(){
     return view('frontend.about-us');
@@ -74,6 +74,13 @@ Route::get('service/{slug}', [FrontendServiceController::class, 'show'])->name('
 Route::get('contact-us', function(){
     return view('frontend.contact-us');
 })->name('contact');
+
+// ── XML Sitemap ──
+Route::get('/sitemap.xml', function () {
+    $blogs = \App\Models\Blog::published()->latest()->get();
+    return response()->view('frontend.sitemap', compact('blogs'))
+        ->header('Content-Type', 'text/xml');
+})->name('sitemap');
 
 
 Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])

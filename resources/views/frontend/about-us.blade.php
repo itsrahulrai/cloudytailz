@@ -1,12 +1,17 @@
 @extends('frontend.layout.app')
 
-@section('title', 'About us | Cloudytailz – Complete Dog & Cat Pet Care Services')
-@section('meta_description', 'Cloudytailz offers premium pet care services for dogs and cats including grooming, healthy
-    food, vet support, and personalized care to keep your furry friends happy and healthy.')
-@section('meta_keywords', 'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services
-    India, dog grooming, cat grooming, pet clinic, pet health care')
+@section('title', 'Our Story of Love & Trusted Pet Care | Cloudytailz')
+@section('meta_description', 'Get to know Cloudytailz, where dogs and cats receive loving care, expert grooming, and wellness support. Discover our story and book a visit today!')
+@section('meta_keywords', 'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services India, dog grooming, cat grooming, pet clinic, pet health care')
 @section('meta_robots', 'index, follow')
-@section('canonical', url()->current())
+@section('canonical', 'https://cloudytailz.com/about-us')
+@section('seo_tags')
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CloudyTailz">
+    <meta property="og:title" content="Our Story of Love & Trusted Pet Care | Cloudytailz">
+    <meta property="og:description" content="Get to know Cloudytailz, where dogs and cats receive loving care, expert grooming, and wellness support. Discover our story and book a visit today!">
+    <meta property="og:url" content="https://cloudytailz.com/about-us">
+@endsection
 @section('content')
 
 
@@ -17,11 +22,11 @@
             <div class="col-lg-12">
                 <!-- Page Header Box Start -->
                 <div class="page-header-box">
-                    <h1 class="text-anime-style-3" data-cursor="-opaque">About us</h1>
+                    <h1 class="text-anime-style-3" data-cursor="-opaque">About Us</h1>
                     <nav class="wow fadeInUp">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="./">home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">About us</li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">About Us</li>
                         </ol>
                     </nav>
                 </div>
@@ -209,7 +214,7 @@
 
                     <!-- Section Footer Text Start -->
                     <div class="section-footer-text">
-                        <p>We provide trusted and compassionate care for your cats and dogs – from routine checkups to advanced treatments. <a href="contact.html">Contact our clinic today.</a></p>
+                        <p>We provide trusted and compassionate care for your cats and dogs – from routine checkups to advanced treatments. <a href="{{ route('contact') }}">Contact our clinic today.</a></p>
                     </div>
                     <!-- Section Footer Text End -->
                 </div>

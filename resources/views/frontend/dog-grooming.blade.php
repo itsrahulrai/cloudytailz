@@ -1,13 +1,17 @@
 @extends('frontend.layout.app')
-@section('title', 'Dog Grooming - Cloudytailz – Complete Dog & Cat Pet Care Services')
-@section('meta_description',
-    'Cloudytailz offers premium pet care services for dogs and cats including grooming, healthy
-    food, vet support, and personalized care to keep your furry friends happy and healthy.')
-@section('meta_keywords',
-    'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services
-    India, dog grooming, cat grooming, pet clinic, pet health care')
+
+@section('title', 'Professional Dog Grooming Services | Cloudytailz')
+@section('meta_description', 'Give your dog a fresh, healthy look with Cloudytailz professional grooming, bathing, haircuts, and hygiene care. Call +91 9429694375 to book today!')
+@section('meta_keywords', 'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services India, dog grooming, cat grooming, pet clinic, pet health care')
 @section('meta_robots', 'index, follow')
-@section('canonical', url()->current())
+@section('canonical', 'https://cloudytailz.com/dog-grooming')
+@section('seo_tags')
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CloudyTailz">
+    <meta property="og:title" content="Professional Dog Grooming Services | Cloudytailz">
+    <meta property="og:description" content="Give your dog a fresh, healthy look with Cloudytailz professional grooming, bathing, haircuts, and hygiene care. Call +91 9429694375 to book today!">
+    <meta property="og:url" content="https://cloudytailz.com/dog-grooming">
+@endsection
 @section('content')
 
 
@@ -21,7 +25,7 @@
                         <h1 class="text-anime-style-3" data-cursor="-opaque">Dog Grooming</h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./">home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Dog Grooming</li>
                             </ol>
                         </nav>

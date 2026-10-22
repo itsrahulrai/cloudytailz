@@ -1,18 +1,22 @@
 @extends('frontend.layout.app')
 
-@section('title', 'Terms and conditions - Cloudytailz – Complete Dog & Cat Pet Care Services')
-@section('meta_description',
-    'Cloudytailz offers premium pet care services for dogs and cats including grooming, healthy
-    food, vet support, and personalized care to keep your furry friends happy and healthy.')
-@section('meta_keywords',
-    'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services
-    India, dog grooming, cat grooming, pet clinic, pet health care')
+@section('title', 'Terms, Terms of Service & Policies | Cloudytailz')
+@section('meta_description', 'Read Cloudytailz Terms & Conditions for pet grooming, bookings, payments, cancellations, refunds, and service policies. Review our terms before booking.')
+@section('meta_keywords', 'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services India, dog grooming, cat grooming, pet clinic, pet health care')
 @section('meta_robots', 'index, follow')
-@section('canonical', url()->current())
+@section('canonical', 'https://cloudytailz.com/terms-and-conditions')
+@section('seo_tags')
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CloudyTailz">
+    <meta property="og:title" content="Terms, Terms of Service & Policies | Cloudytailz">
+    <meta property="og:description" content="Read Cloudytailz Terms & Conditions for pet grooming, bookings, payments, cancellations, refunds, and service policies. Review our terms before booking.">
+    <meta property="og:url" content="https://cloudytailz.com/terms-and-conditions">
+@endsection
 @section('content')
 
     <style>
-        .service-entry h1 {
+        .service-entry h1,
+        .service-entry h2 {
             margin-bottom: 15px;
         }
 
@@ -47,7 +51,7 @@
                         <h1 class="text-anime-style-3" data-cursor="-opaque">Terms and conditions</h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./">home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Terms and conditions</li>
                             </ol>
                         </nav>
@@ -68,7 +72,7 @@
                     <div class="service-single-content">
                         <div class="service-entry">
 
-                            <h1>Terms & Conditions</h1>
+                            <h2>Terms & Conditions</h2>
                             <p><strong>Last Updated:</strong> 21-02-2026</p>
 
                             <p>

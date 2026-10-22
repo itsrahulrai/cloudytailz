@@ -1,14 +1,17 @@
 @extends('frontend.layout.app')
 
-@section('title', 'Cloudytailz – Complete Dog & Cat Pet Care Services')
-@section('meta_description',
-    'Cloudytailz offers premium pet care services for dogs and cats including grooming, healthy
-    food, vet support, and personalized care to keep your furry friends happy and healthy.')
-@section('meta_keywords',
-    'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services
-    India, dog grooming, cat grooming, pet clinic, pet health care')
+@section('title', 'Book Pet Grooming & Care Services | Cloudytailz')
+@section('meta_description', 'Ready to pamper your pet? Contact Cloudytailz to book professional dog and cat grooming, wellness support, and convenient pet care services today!')
+@section('meta_keywords', 'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services India, dog grooming, cat grooming, pet clinic, pet health care')
 @section('meta_robots', 'index, follow')
-@section('canonical', url()->current())
+@section('canonical', 'https://cloudytailz.com/contact-us')
+@section('seo_tags')
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CloudyTailz">
+    <meta property="og:title" content="Book Pet Grooming & Care Services | Cloudytailz">
+    <meta property="og:description" content="Ready to pamper your pet? Contact Cloudytailz to book professional dog and cat grooming, wellness support, and convenient pet care services today!">
+    <meta property="og:url" content="https://cloudytailz.com/contact-us">
+@endsection
 @section('content')
 
 
@@ -22,7 +25,7 @@
                         <h1 class="text-anime-style-3" data-cursor="-opaque">Contact Us</h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./">home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
                             </ol>
                         </nav>
@@ -74,7 +77,7 @@
                             </div>
                             <div class="contact-info-item-content">
                                 <h3>Our Locations</h3>
-                                <p>55, Street No. 1, Rajiv Gandhi Nagar, New Mustafabad, Gokalpuri, NCT of Delhi, 110094</p>
+                                <p>55, Gali No. 3, Block G, Rajiv Gandhi Nagar, New Mustafabad, Gokulpuri, Delhi, 110094</p>
                             </div>
                         </div>
                         <!-- Contact Info Item End  -->
@@ -86,7 +89,7 @@
                             </div>
                             <div class="contact-info-item-content">
                                 <h3>Working Hours</h3>
-                                <p>Mon-Sat: 9:00 AM - 8:00 PM</p>
+                                <p>Mon-Sat: 8:00 AM - 8:00 PM</p>
                                 <p>Sunday: Closed</p>
                             </div>
                         </div>
@@ -153,9 +156,9 @@
                         <!-- Google Map Start -->
                         <div class="google-map-iframe">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.675927891285!2d77.26759672457594!3d28.709282080593024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfc1a0bc424cb%3A0x53ee1af4879fb11e!2sRajiv%20Gandhi%20Nagar%2C%20New%20Mustafabad%2C%20Delhi%2C%20110090!5e1!3m2!1sen!2sin!4v1774602687008!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.1040667868465!2d77.2673081!3d28.716435799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd470bde8a67%3A0xbde24510785f39d9!2sCloudytailz%20Pet%20Care!5e0!3m2!1sen!2sin!4v1792130363401!5m2!1sen!2sin"
                                 width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                referrerpolicy="strict-origin-when-cross-origin"></iframe>
                         </div>
                         <!-- Google Map End -->
                     </div>

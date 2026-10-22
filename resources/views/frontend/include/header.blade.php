@@ -3,7 +3,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <!-- Logo Start -->
-                <a class="navbar-brand" href="./">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <img src="{{ asset_url('assets/images/logo-cloudy.jpeg')}}" width="100px" alt="Logo">
                 </a>
                 <!-- Logo End -->
@@ -12,7 +12,7 @@
                 <div class="collapse navbar-collapse main-menu">
                     <div class="nav-menu-wrapper">
                         <ul class="navbar-nav mr-auto" id="menu">
-                            <li class="nav-item"><a class="nav-link" href="./">Home</a> </li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a> </li>
                             <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About us</a>
                             <li class="nav-item submenu"><a class="nav-link" href="javascript:void(0)">Services</a>
                                 <ul>

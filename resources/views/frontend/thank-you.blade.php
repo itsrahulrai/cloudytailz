@@ -4,8 +4,8 @@
     food, vet support, and personalized care to keep your furry friends happy and healthy.')
 @section('meta_keywords', 'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services
     India, dog grooming, cat grooming, pet clinic, pet health care')
-@section('meta_robots', 'index, follow')
-@section('canonical', url()->current())
+@section('meta_robots', 'noindex, follow')
+@section('canonical', 'https://cloudytailz.com/thank-you')
 @section('content')
 
 
@@ -19,7 +19,7 @@
                     <h1 class="text-anime-style-3" data-cursor="-opaque">Thank You!</h1>
                     <nav class="wow fadeInUp">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="./">home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Thank You!</li>
                         </ol>
                     </nav>
@@ -43,7 +43,7 @@
                        Thank You!
                     </h2>
                     <p> We've received your message and will get back to you within 24 hours. Our team is excited to help your pet!</p>
-                    <a href="/" class="btn-default mt-3"><span>Back to Home</span></a>
+                    <a href="{{ route('home') }}" class="btn-default mt-3"><span>Back to Home</span></a>
                 </div>
                 <!-- Section Title End -->
             </div>

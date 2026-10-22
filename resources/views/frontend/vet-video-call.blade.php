@@ -1,14 +1,17 @@
 @extends('frontend.layout.app')
 
-@section('title', 'Vet Video Call - nCloudytailz – Complete Dog & Cat Pet Care Services')
-@section('meta_description',
-    'Cloudytailz offers premium pet care services for dogs and cats including grooming, healthy
-    food, vet support, and personalized care to keep your furry friends happy and healthy.')
-@section('meta_keywords',
-    'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services
-    India, dog grooming, cat grooming, pet clinic, pet health care')
+@section('title', 'Meet Our Pet Experts on Video Call | Cloudytailz')
+@section('meta_description', 'Meet pet care experts on video call with Cloudytailz. Get convenient online guidance for your dog or cat from home. Book your consultation today!')
+@section('meta_keywords', 'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services India, dog grooming, cat grooming, pet clinic, pet health care')
 @section('meta_robots', 'index, follow')
-@section('canonical', url()->current())
+@section('canonical', 'https://cloudytailz.com/vet-video-call')
+@section('seo_tags')
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CloudyTailz">
+    <meta property="og:title" content="Meet Our Pet Experts on Video Call | Cloudytailz">
+    <meta property="og:description" content="Meet pet care experts on video call with Cloudytailz. Get convenient online guidance for your dog or cat from home. Book your consultation today!">
+    <meta property="og:url" content="https://cloudytailz.com/vet-video-call">
+@endsection
 @section('content')
 
 
@@ -22,7 +25,7 @@
                         <h1 class="text-anime-style-3" data-cursor="-opaque">Vet Video Call</h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./">home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Vet Video Call</li>
                             </ol>
                         </nav>

@@ -1,14 +1,17 @@
 @extends('frontend.layout.app')
 
-@section('title', 'Cloudytailz – Complete Dog & Cat Pet Care Services')
-@section('meta_description',
-    'Cloudytailz offers premium pet care services for dogs and cats including grooming, healthy
-    food, vet support, and personalized care to keep your furry friends happy and healthy.')
-@section('meta_keywords',
-    'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services
-    India, dog grooming, cat grooming, pet clinic, pet health care')
+@section('title', 'Expert Pet Nutritionist & Diet Plans | Cloudytailz')
+@section('meta_description', 'Keep your dog or cat healthy with personalized diet plans from Cloudytailz. Get expert nutrition guidance for weight management and wellness. Call +91 9429694375!')
+@section('meta_keywords', 'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services India, dog grooming, cat grooming, pet clinic, pet health care')
 @section('meta_robots', 'index, follow')
-@section('canonical', url()->current())
+@section('canonical', 'https://cloudytailz.com/pet-nutritionist')
+@section('seo_tags')
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CloudyTailz">
+    <meta property="og:title" content="Expert Pet Nutritionist & Diet Plans | Cloudytailz">
+    <meta property="og:description" content="Keep your dog or cat healthy with personalized diet plans from Cloudytailz. Get expert nutrition guidance for weight management and wellness. Call +91 9429694375!">
+    <meta property="og:url" content="https://cloudytailz.com/pet-nutritionist">
+@endsection
 @section('content')
 
 
@@ -22,7 +25,7 @@
                         <h1 class="text-anime-style-3" data-cursor="-opaque">Pet Nutritionist</h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./">home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Pet Nutritionist</li>
                             </ol>
                         </nav>

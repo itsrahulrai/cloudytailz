@@ -1,14 +1,17 @@
 @extends('frontend.layout.app')
 
-@section('title', 'Our Gallery - Cloudytailz – Complete Dog & Cat Pet Care Services')
-@section('meta_description',
-    'Cloudytailz offers premium pet care services for dogs and cats including grooming, healthy
-    food, vet support, and personalized care to keep your furry friends happy and healthy.')
-@section('meta_keywords',
-    'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services
-    India, dog grooming, cat grooming, pet clinic, pet health care')
+@section('title', 'Adorable Pets & Beautiful Grooming Moments | Cloudytailz')
+@section('meta_description', "See happy faces, fluffy makeovers, and precious moments in our pet gallery. Discover Cloudytailz's loving care for dogs and cats. Explore now!")
+@section('meta_keywords', 'Cloudytailz, pet care, dog care, cat care, pet grooming, pet food, vet services, pet services India, dog grooming, cat grooming, pet clinic, pet health care')
 @section('meta_robots', 'index, follow')
-@section('canonical', url()->current())
+@section('canonical', 'https://cloudytailz.com/gallery')
+@section('seo_tags')
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CloudyTailz">
+    <meta property="og:title" content="Adorable Pets & Beautiful Grooming Moments | Cloudytailz">
+    <meta property="og:description" content="See happy faces, fluffy makeovers, and precious moments in our pet gallery. Discover Cloudytailz's loving care for dogs and cats. Explore now!">
+    <meta property="og:url" content="https://cloudytailz.com/gallery">
+@endsection
 @section('content')
 
 
@@ -19,11 +22,11 @@
                 <div class="col-lg-12">
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
-                        <h1 class="text-anime-style-3" data-cursor="-opaque">Our Gallery</h1>
+                        <h1 class="text-anime-style-3" data-cursor="-opaque">Gallery</h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./">home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Our Gallery</li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
                             </ol>
                         </nav>
                     </div>
@@ -42,7 +45,7 @@
                 <div class="col-lg-4 col-6">
                     <!-- Image Gallery start -->
                     <div class="photo-gallery wow fadeInUp">
-                        <a href="{{ asset_url('assets/images/services/cat-grooming.png') }} data-cursor-text="View">
+                        <a href="{{ asset_url('assets/images/services/cat-grooming.png') }}" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="{{ asset_url('assets/images/services/cat-grooming.png') }}" alt="">
                             </figure>
